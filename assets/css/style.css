@@ -1,0 +1,35 @@
+@media only screen and (max-width: 768px) {
+  body {
+    font-size:7px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  body {
+    font-size:6px;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  body {
+    font-size:8px;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  body {
+    font-size:10px;
+  }
+}
+
+.row.justify-content-center {
+}
+
+.row.justify-content-center {
+}
+
+.item-list {
+  font-size:2em;
+  margin:6px 12px 6px 12px;
+}
+
