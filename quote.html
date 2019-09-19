@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tri County Dumpster Rental">
+    <title>Payment - Tri County Dumpster Rental</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#" style="font-size:2em;max-width:78%;"><img class="img-fluid" src="assets/img/hat.png" style="margin-right:10px;max-width:33%;">Tri County Dumpster Rental</a><button class="navbar-toggler" data-toggle="collapse"
+                data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="service-area.html">Service Area</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="unallowed-items.html">items We DOn't Take</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="quote.html">Request Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page payment-page">
+        <section class="clean-block payment-form dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 class="text-info">Request a Quote</h2>
+                    <p style="font-size:2.2em;">Fill out the following form and we will contact you at our earliest convenience.</p>
+                </div>
+                <form>
+                    <div class="products">
+                        <div class="item" style="margin-bottom:20px;">
+                            <p class="item-name" style="font-size:2em;">Name:</p><input class="form-control" type="text" required="" id="name_input"></div>
+                        <div class="item" style="margin-bottom:20px;">
+                            <p class="item-name" style="font-size:2em;">Telephone:</p><input class="form-control" type="tel" required="" placeholder="(888) 888-8888" id="phone_input"></div>
+                        <div class="item" style="margin-bottom:20px;">
+                            <p class="item-name" style="font-size:2em;">Email:</p><input class="form-control" type="email" required="" placeholder="john@doe.com" id="email_input"></div>
+                        <div style="margin-bottom:20px;">
+                            <p class="item-name" style="font-size:2em;margin-bottom:0px;">Address Line 1:</p><input class="form-control" type="text" id="address1_input"></div>
+                        <div style="margin-bottom:20px;">
+                            <p class="item-name" style="font-size:2em;margin-bottom:0px;">Address Line 2:</p><input class="form-control" type="text" id="address2_input"></div>
+                        <div class="d-flex">
+                            <div style="margin-bottom:20px;width:80%;">
+                                <p class="item-name" style="font-size:2em;margin-bottom:0px;">City / Town:</p><input class="form-control" type="text" id="city_input"></div>
+                            <div style="margin-bottom:20px;min-width:30%;">
+                                <p class="item-name" style="font-size:2em;margin-bottom:0px;">Zip Code:</p><input class="form-control" type="number" required="" min="48001" max="49971" id="zip_input"></div>
+                        </div>
+                        <div style="margin-bottom:20px;">
+                            <p class="item-name" style="font-size:2em;margin-bottom:0px;">Short Description Of What You're Disposing:</p><textarea class="form-control" id="description_input" style="min-height:140px;"></textarea></div>
+                        <div style="margin-bottom:20px;">
+                            <p class="item-name" style="font-size:2em;margin-bottom:0px;">Where Would You Like The Dumpster Placed:</p><textarea class="form-control" id="description_input" style="min-height:60px;"></textarea></div>
+                        <div class="item" style="margin-bottom:20px;">
+                            <p class="item-name" style="font-size:2em;margin-bottom:8px;margin-top:10px;">Requested Date and Time:</p>
+                            <div class="flex-wrap">
+                                <div class="d-flex" style="max-width:400px;margin-bottom:6px;"><label for="from" style="margin-right:5px;height:-;font-size:2em;">Date:</label><input class="form-control" type="date" id="date_input" style="max-width:70%;margin-left:auto;"></div>
+                                <div class="d-flex" style="max-width:400px;margin-bottom:14px;"><label for="to" style="margin-left:5px;margin-right:5px;font-size:2em;">Time:</label><input class="form-control" type="time" value="00:00" id="time_input" style="margin-left:auto;max-width:70%;"></div>
+                            </div>
+                        </div>
+                        <div id="length_input" class="item" style="margin-bottom:20px;">
+                            <p class="item-name" style="font-size:2em;">How Many Days:</p><select class="form-control" id="length_input" style="max-width:30%;"><option value="" selected="">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select></div>
+                        <div>
+                            <p class="item-name" style="font-size:2em;margin-top:0px;margin-bottom:2px;">How should we contact you?</p>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5" style="height:80%;width:20px;max-height:30px;"><label class="form-check-label d-inline" for="formCheck-5" style="font-size:2em;margin-left:4px;">Phone (9am-5pm)</label></div>
+                            <div
+                                class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4" style="width:20px;height:80%;max-height:30px;"><label class="form-check-label d-inline" for="formCheck-4" style="font-size:2em;margin-left:4px;">Text</label></div>
+                        <div
+                            class="form-check"><input class="form-check-input d-inline" type="checkbox" id="formCheck-3" style="width:20px;height:80%;max-height:30px;margin-right:48px;"><label class="form-check-label d-inline" for="formCheck-3" style="font-size:2em;margin-left:4px;">Email</label></div>
+            </div>
+            <div class="total">
+                <div style="margin-top:15px;"><button class="btn btn-primary btn-block" type="submit" disabled="disabled" id="submitBtn">Button</button></div>
+            </div>
+            </div>
+            </form>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5 class="text-center" style="font-size:4em;">Tricounty Dumpster Rental</h5>
+                    <p class="text-center" style="font-size:2.5em;color:rgb(255,255,255);margin-bottom:8px;">Call or Text<a class="text-primary" href="tel:+8103430161">&nbsp;(810) 343-0161</a></p>
+                    <p class="text-center" style="font-size:2em;color:rgb(255,255,255);margin-bottom:8px;">Available 24 Hours for Questions, Scheduling, or Emergency Service</p>
+                    <p class="text-center" style="font-size:2em;color:rgb(255,255,255);margin-top:-22px;"><br><strong>Weekend and evening deliveries available</strong><br><img class="d-inline" src="assets/img/creditcards.jpg" style="max-width:300px;margin-top:15px;"></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright" style="margin-top:10px;">
+            <p>© 2019 Tricounty Dumpster Rental Inc.</p>
+        </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
